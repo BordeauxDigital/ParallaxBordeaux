@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Parallax</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <section>
+        <img src="img/stars.png" id="stars" />
+        <img src="img/planets.png" id="planets" />
+        <img src="img/planetslight.png" id="planetslight" />
+        <img src="img/rock3.png" id="rock3" />
+        <img src="img/rock2.png" id="rock2" />
+        <h2 id="text">Mars Vibes</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/rock1.png" id="rock1" />
+      </section>
+      <div class="sec" id="sec">
+        <h2>Parallax Effect & Animations</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+          vestibulum, massa vitae vestibulum imperdiet, odio turpis posuere
+          justo, a consequat enim nunc a ligula. Donec lobortis sodales lacus,
+          congue convallis est. Fusce sodales sem ac turpis commodo, nec
+          facilisis eros aliquam. Aenean dignissim aliquet mauris nec dictum.
+          Sed aliquam ligula nec dolor consequat, quis dictum nisi posuere.
+          Suspendisse imperdiet vehicula volutpat. Nam nec nulla vel diam
+          dignissim viverra eget a ipsum. Suspendisse commodo sem eu lorem
+          dictum egestas. Curabitur ut erat risus. Pellentesque efficitur
+          dapibus est nec ornare.
+        </p>
+        <p>
+          Vestibulum imperdiet convallis velit, a mollis purus vulputate sit
+          amet. Ut sit amet orci nec tortor rhoncus placerat a suscipit massa.
+          Cras scelerisque urna nec ultricies feugiat. In sit amet nulla mi.
+          Nunc ligula neque, aliquam eu orci non, sagittis sagittis lectus.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Maecenas ullamcorper lectus ac enim faucibus
+          blandit. Nulla a turpis varius, placerat dolor sit amet, aliquam diam.
+          Duis auctor turpis quis sem dignissim tincidunt. In ac dolor nisl.
+          Etiam sit amet magna lorem. Fusce et sapien sed urna sagittis faucibus
+          sit amet id dui. Aliquam eu felis consequat, imperdiet quam et,
+          pretium sapien. Fusce condimentum at nulla eget convallis.
+        </p>
+        <p>
+          Integer fermentum eget lectus eu gravida. Suspendisse ac libero et
+          mauris facilisis pellentesque. Donec aliquam bibendum libero, eu
+          viverra metus congue ut. Aenean gravida, purus a volutpat aliquam,
+          eros ipsum aliquam libero, at blandit nulla massa aliquet eros.
+          Phasellus tempus in quam vitae tincidunt. In vestibulum ut tortor a
+          imperdiet. Curabitur aliquet blandit porta. Duis consequat cursus
+          lacus, sed venenatis velit maximus facilisis. Vestibulum nec finibus
+          leo, ac facilisis tellus. Morbi aliquam aliquam nunc, ut ultricies mi
+          rhoncus nec. Suspendisse ultricies nisi erat, in porttitor lacus
+          interdum at. Duis ultricies nulla eu varius efficitur. Curabitur
+          eleifend tincidunt urna, nec iaculis quam convallis eu. Aliquam ac
+          volutpat urna. Nullam vel ipsum quis mauris rutrum lobortis. Phasellus
+          lacinia vulputate imperdiet.
+        </p>
+        <p>
+          Phone Icons made by
+          <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
+        <p>
+          <a href="https://www.freepik.com/vectors/space"
+            >Space vectors created by upklyak - www.freepik.com</a
+          >
+        </p>
+        <h3>
+          <a href="https://www.instagram.com/bordeauxdigital/"
+            >Made by BordeauxDigital</a
+          >
+        </h3>
+      </div>
+
+      <section class="ships">
+        <img src="img/asteroids.png" id="asteroids" />
+        <img src="img/spaceship.png" id="spaceship" />
+        <img src="img/starbase.png" id="starbase" />
+      </section>
+    </div>
+    <div id="warning-message">
+      <p>Please Rotate your Phone!</p>
+      <img src="img/smartphone.png" id="smarthphone" />
+    </div>
+
+    <script>
+      let stars = document.getElementById("stars");
+      let planets = document.getElementById("planets");
+      let planetslight = document.getElementById("planetslight");
+      let rock3 = document.getElementById("rock3");
+      let rock2 = document.getElementById("rock2");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let rock1 = document.getElementById("rock1");
+      let asteroids = document.getElementById("asteroids");
+      let spaceship = document.getElementById("spaceship");
+      let starbase = document.getElementById("starbase");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        planets.style.top = value * 1.05 + "px";
+        planetslight.style.top = value * 1.05 + "px";
+        rock3.style.top = value * 0.9 + "px";
+        rock2.style.top = value * 0.75 + "px";
+        rock1.style.top = value * 0 + "px";
+        text.style.marginRight = value * 1 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+
+        spaceship.style.left = value * 0.25 - 400 + "px";
+        starbase.style.left = -value * 0.25 + 400 + "px";
+      });
+    </script>
+  </body>
+</html>
