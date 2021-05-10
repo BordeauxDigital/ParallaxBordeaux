@@ -101,6 +101,10 @@
       <img src="img/smartphone.png" id="smarthphone" />
     </div>
 
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     <script>
       let stars = document.getElementById("stars");
       let planets = document.getElementById("planets");
@@ -130,5 +134,10 @@
         starbase.style.left = -value * 0.25 + 400 + "px";
       });
     </script>
+    <script>
+      $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+      });
+  </script>
   </body>
 </html>
