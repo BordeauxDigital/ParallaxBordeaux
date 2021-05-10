@@ -208,6 +208,7 @@ section img#asteroids {
     display:flex;
     justify-content: center;
     align-items: center;
+    z-index:1010;
   }
   .loader {
     display: inline-block;
